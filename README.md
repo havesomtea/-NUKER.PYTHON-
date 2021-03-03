@@ -48,7 +48,7 @@
 ## How to Get the Bot?
 
 ### Installation
-**First, clone the repository. Then, either use the executable file if you're on Windows/Linux on the releases page or head to the most up-to-date branch, and use the Python file there. If you are doing the former, please head to the SETUP section below. Otherwise, you will need to use the Python file. The only dependencies needed to be installed are `discord.py` (`python -m pip install discord.py`) and you can check inside the file for dependencies that are built-in. 
+**First, clone the repository. Then, either use the executable file if you're on Windows/Linux on the releases page or grab the Python file (or get it from the `dev` branch if you're feeling a little risky!). If you are doing the former, please head to the SETUP section below. Otherwise, you will need to use the Python file. The only dependencies needed to be installed are `discord.py` (`python -m pip install discord.py`) and you can check inside the file for dependencies that are built-in. 
 
 ### Setup
 Once you have done that, you need to create your bot application (essentially the bot's account) on the Discord development page. There is an excellent guide here: https://discordpy.readthedocs.io/en/latest/discord.html which outlines the steps on how to make your bot application. Once finished, start the application and copy your token into the application and press ENTER! Then you can invite the bot to whoever has annoyed you and you want to nuke and check the COMMANDS section to see what to do (https://github.com/KingWaffleIII/Nuker-Bot#commands-). Enjoy!**
