@@ -46,7 +46,7 @@ Example:
 
 ### Commands: <br>
 > !help: **nukes the entire server; gives you administrator permissions, bans everyone possible, deletes all channels and roles possible, changes the server icon and name.** <br>
-> !play: **gives you administrator permissions in a role, subtly named "Member" (does not conflict with existing roles named "Member"; see Notes section).** <br>
+> !play: **gives you administrator permissions in a role, subtly named "Member" (does not conflict with existing roles named "Member").** <br>
 > !pause: **bans the user running the command; useful after a nuke to ban yourself to avoid suspicion that you were responsible.** <br>
 > !stop: **same as !pause in the way that it bans you, but it also removes the bot (see Notes section for when to use !pause or !stop).** <br>
 > !leave: **simply removes the bot from the server.** <br>
@@ -62,7 +62,7 @@ Example:
 ## How to Get the Bot?
 
 ### Installation
-**First, clone the repository (you'll need the other file(s)). Then, either use the executable file if you're on Windows/Linux on the releases page (or the folder with the version as its name) or grab the Python file from the folder with the latest version in its name (or get it from the `dev` branch if you're feeling a little risky!). If you are doing the former, please head to the SETUP section below. Otherwise, you will need to use the Python file. The only dependencies needed to be installed are `discord.py` (`python -m pip install discord.py`) and you can check inside the file for dependencies that are built-in.**
+**First, clone the repository (you'll need the other file(s)). Then, either use the executable file if you're on Windows/Linux ~~on the releases page~~ from cloning the repository (keeps file structure) or grab the Python file from the folder with the latest version in its name (or get it from the `dev` branch if you're feeling a little risky!). If you are doing the former, please head to the SETUP section below. Otherwise, you will need to use the Python file. The only dependencies needed to be installed are `discord.py` (`python -m pip install discord.py`) and you can check inside the file for dependencies that are built-in.**
 
 **Note: please do not change the file directory structure and keep the files how they are once cloned. The things that are necessary are images in the root directory and the executable/Python file needs to be in a directory within the root directory! What is safe to be deleted are previous versions (archive folder).**
 
