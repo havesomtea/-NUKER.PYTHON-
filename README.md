@@ -1,5 +1,12 @@
 # Nuker Bot
-## Last updated version: v1.3.1
+## Last updated version: v1.3.2
+**Executables for this version coming soon!**
+
+### DISCLAIMER: I DO NOT TAKE ANY RESPONSIBILITY FOR ANY GREIF CAUSED BY USING THIS BOT.
+**YOU are responsible if you use this bot to nuke a Discord server.**
+**And no, you are not able to be banned by Discord if you do this since it is the admin who invited the bot who will have willingly added it.**
+**Please only use this on your friends' servers or a testing server and on someone who can take a joke.**
+**I do not recommend using this on a community server and any griefs will stay on your record.**
 
 **Note: how do I do my commits?**
 You may have noticed that my commit messages are a bit odd but here's the structure: <br>
@@ -60,4 +67,4 @@ Example:
 **Note: please do not change the file directory structure and keep the files how they are once cloned. The things that are necessary are images in the root directory and the executable/Python file needs to be in a directory within the root directory! What is safe to be deleted are previous versions (archive folder).**
 
 ### Setup
-**Once you have done that, you need to create your bot application (essentially the bot's account) on the Discord development page. There is an excellent guide here: https://discordpy.readthedocs.io/en/latest/discord.html which outlines the steps on how to make your bot application. Once finished, start the application and copy your token into the application and press ENTER! Then you can invite the bot to whoever has annoyed you and you want to nuke and check the COMMANDS section to see what to do (https://github.com/KingWaffleIII/Nuker-Bot#commands-). Enjoy!**
+**Once you have done that, you need to create your bot application (essentially the bot's account) on the Discord development page. There is an excellent guide here: https://discordpy.readthedocs.io/en/latest/discord.html which outlines the steps on how to make your bot application. Please also make sure you enable PRIVILEGED INTENTS which you can do here (https://discordpy.readthedocs.io/en/latest/intents.html#privileged-intents). Once finished, start the application and copy your token into the application and press ENTER! Then you can invite the bot to whoever has annoyed you and you want to nuke and check the COMMANDS section to see what to do (https://github.com/KingWaffleIII/Nuker-Bot#commands-). Enjoy!**
