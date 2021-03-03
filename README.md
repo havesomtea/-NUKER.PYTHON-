@@ -3,7 +3,7 @@
 
 **Note: how do I do my commits?**
 You may have noticed that my commit messages are a bit odd but here's the structure: <br>
-\[version] \<changes>
+\[latest version] \<changes>
 <br>
 Example:
 \[v1.3.1] Add archive for older .py files
