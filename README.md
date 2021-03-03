@@ -1,6 +1,13 @@
 # Nuker Bot
 ## Last updated version: v1.3.1
 
+**Note: how do I do my commits?**
+You may have noticed that my commit messages are a bit odd but here's the structure: <br>
+\[latest version] \<changes>
+<br>
+Example:
+\[v1.3.1] Add archive for older .py files
+
 ### *Why should you use a bot?* <br>
 **When nuking, you can either utilise administrator permissions and do it yourself, or you can use a bot. In my opinion, the latter is much better. Let's look at the pros and cons of each:**
 
@@ -48,7 +55,7 @@
 ## How to Get the Bot?
 
 ### Installation
-**First, clone the repository (you'll need the images). Then, either use the executable file if you're on Windows/Linux on the releases page or grab the Python file (or get it from the `dev` branch if you're feeling a little risky!). If you are doing the former, please head to the SETUP section below. Otherwise, you will need to use the Python file. The only dependencies needed to be installed are `discord.py` (`python -m pip install discord.py`) and you can check inside the file for dependencies that are built-in.**
+**First, clone the repository (you'll need the other file(s)). Then, either use the executable file if you're on Windows/Linux on the releases page (or the folder with the version as its name) or grab the Python file from the folder with the latest version in its name (or get it from the `dev` branch if you're feeling a little risky!). If you are doing the former, please head to the SETUP section below. Otherwise, you will need to use the Python file. The only dependencies needed to be installed are `discord.py` (`python -m pip install discord.py`) and you can check inside the file for dependencies that are built-in.**
 
 ### Setup
 **Once you have done that, you need to create your bot application (essentially the bot's account) on the Discord development page. There is an excellent guide here: https://discordpy.readthedocs.io/en/latest/discord.html which outlines the steps on how to make your bot application. Once finished, start the application and copy your token into the application and press ENTER! Then you can invite the bot to whoever has annoyed you and you want to nuke and check the COMMANDS section to see what to do (https://github.com/KingWaffleIII/Nuker-Bot#commands-). Enjoy!**
