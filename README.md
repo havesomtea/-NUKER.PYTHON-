@@ -1,8 +1,8 @@
 # Nuker Bot
-## Version: v1.3.1-DEV
-## Latest pre
+## Version: v1.4-DEV
+## Latest pre-release: N/A
 ### This is the development and pre-release version; some features may be unstable or not work at all!
-**Last STABLE version: v1.3.1**
+**Last STABLE version: v1.3.2**
 
 **There are two available Python files here. The first is the develoment version which takes the last stable release and attempts to add and stabilise the new planned features. Then there is the pre-release which is created when enough of the planned features are stable. Both are available for download but I don't recommend at all you use the development version since it can be very unstable or even broken. I only recommed the use of stable versions but you can use the pre-release if you feel a little risky!**
 
