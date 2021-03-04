@@ -1,6 +1,6 @@
 # Nuker Bot
-## Last updated version: v1.3.2
-**Executables for this version coming soon!**
+## Last updated version: v1.3.3
+Old versions no longer available due to broken code.
 
 ### DISCLAIMER: I DO NOT TAKE ANY RESPONSIBILITY FOR ANY GREIF CAUSED BY USING THIS BOT.
 **YOU are responsible if you use this bot to nuke a Discord server.**
@@ -38,7 +38,7 @@
 - It requires a **lot of trust** to get administrator permissions.
 - It is **less efficient and slower** than using a bot.
 
-### As you can see, using a bot is much better, and luckily for you, there's one ready here, and you can get free access to the code!
+### As you can see, using a bot is much better, and luckily for you, there's one ready here, and you can get free access to the code!**Executables for this version coming soon!**
 
 ## Usage
 
