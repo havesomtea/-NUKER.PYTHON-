@@ -1,6 +1,7 @@
 # Nuker Bot
-## Last updated version: v1.3.3
+## Latest stable version: v1.3.3
 Old versions no longer available due to broken code.
+Old executables will no longer be available; only for the latest stable version.
 
 ### DISCLAIMER: I DO NOT TAKE ANY RESPONSIBILITY FOR ANY GREIF CAUSED BY USING THIS BOT.
 **YOU are responsible if you use this bot to nuke a Discord server.**
