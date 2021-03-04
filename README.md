@@ -8,12 +8,10 @@
 **Please only use this on your friends' servers or a testing server and on someone who can take a joke.**
 **I do not recommend using this on a community server and any griefs will stay on your record.**
 
-**Note: how do I do my commits?**
-You may have noticed that my commit messages are a bit odd but here's the structure: <br>
-\[latest version] \<changes>
-<br>
-Example:
-\[v1.3.1] Add archive for older .py files
+### Shortcuts:
+[Usage](https://github.com/KingWaffleIII/Nuker-Bot/tree/main#usage)
+[Installation](https://github.com/KingWaffleIII/Nuker-Bot/tree/main#installation)
+[Setup](https://github.com/KingWaffleIII/Nuker-Bot/tree/main#setup)
 
 ### *Why should you use a bot?* <br>
 **When nuking, you can either utilise administrator permissions and do it yourself, or you can use a bot. In my opinion, the latter is much better. Let's look at the pros and cons of each:**
