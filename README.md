@@ -10,14 +10,8 @@
 **All pre-release version will be officially released on the releases page but only Python files will be available.**
 
 ### Changes planned (will be ticked off when available in a PRE-RELEASE):
-- A set of customisation options which allows you to configure how you want a nuke to work (e.g. you only want to delete all the channels or ban everyone). Example:
-(all values are set to **true** by default and this command excludes giving you admin since there is !play)
-!volume 1 false: disable deleting of all channels
-(initiate the nuke) !skip: bans everyone, changes server icon and name, deletes all roles, makes the nuke channel **but does not delete any channels**
-(note: this does not affect the classic !help nuke; this customisable nuke will be available in this command)
 
-
-Planned customisation options:
+No development is happening at the moment. Check back later or submit a new issue with a feature request!
 
 ### Changes made from the last stable release (extends main/README.md so read that first)
 
